@@ -1,29 +1,37 @@
-# vuedemo
-
-## Project setup
+# VUE Nginx Docker 镜像
+## 淘宝源
 ```
-npm install
+npm conf set registry https://registry.npm.taobao.org
+
+```
+## 创建VUE项目
+```
+npm install -g @vue/cli
+
+vue create vuedemo
+
 ```
 
-### Compiles and hot-reloads for development
+## 开发环境运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+## 编译生成
 ```
 npm run build
 ```
 
-### Lints and fixes files
+经过NodeJS编译后，会在./dist目录生成静态文件。
+
+## Docker
+### 构建镜像
 ```
-npm run lint
+docker build -t vue-container .
+
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-
-
-### Docker
+### 启动容器
+```
+docker run -p 8092:8092 -d --name vueApp vue-container
+```
