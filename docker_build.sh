@@ -29,5 +29,5 @@ if [ $? -eq 0 ]; then
 else 
  echo "push failed"
 fi
-#docker rmi ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}
-#docker rmi ${DOCKER_REMOTE_IMAGE}:${DOCKER_IMAGE_VERSION} 
+docker rmi ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}
+docker rmi ${DOCKER_REMOTE_IMAGE}:${DOCKER_IMAGE_VERSION} 
