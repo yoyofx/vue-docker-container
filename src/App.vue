@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="div-inline">
+        <HelloWorld  msg="Welcome to hello world"/>
+    </div>
+    <div class="div-inline">
+        <Hello2 class="div-inline" msg="Welcome to hello2"/>
+    </div>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Hello2 from './components/Hello2.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,Hello2
   }
 }
 </script>
@@ -25,4 +30,6 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.div-inline{ float: left; padding-right: 50px; } 
 </style>
