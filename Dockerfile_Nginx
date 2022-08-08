@@ -1,4 +1,4 @@
-FROM nginxinc/nginx-unprivileged:1.19
+FROM kubelilin/nginx_container:v1.23.1
 
 USER 0
 
